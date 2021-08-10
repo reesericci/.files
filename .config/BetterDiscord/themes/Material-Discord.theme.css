@@ -1,0 +1,27 @@
+/**
+ * @name Material_Discord
+ * @version 3.0.3
+ * @description A theme based on Google's Material Design
+ * @author CapnKitten
+ * 
+ * @website http://github.com/CapnKitten
+ * @source https://github.com/CapnKitten/BetterDiscord/blob/master/Themes/Material-Discord/css/source.css
+ * @donate https://paypal.me/capnkitten
+ * @invite jzJkA6Z
+ */
+
+@import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css);
+
+:root {
+	--accent-color: #577be2;
+	--accent-rgb: 94,122,199;
+	--accent-text-color: #fff;
+	--accent-button-action: #fff; /*	-	*/
+
+	--message-radius: 19px;
+	--message-padding: 8px 12px;
+	--message-padding-alt: 4px 12px 8px 12px; /*	-	*/
+
+	--card-radius: 5px;
+	--card-radius-big: 10px;
+}

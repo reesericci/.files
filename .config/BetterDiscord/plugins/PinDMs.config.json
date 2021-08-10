@@ -1,0 +1,65 @@
+{
+	"general": {
+		"pinIcon": true,
+		"unreadAmount": true,
+		"channelAmount": true
+	},
+	"pinned": {
+		"417047078565576740": {
+			"channelList": {
+				"3736296363344178": {
+					"id": "3736296363344178",
+					"name": "Friends",
+					"dms": [
+						"811981094282461194",
+						"668501500053422141",
+						"717466694280413286"
+					],
+					"pos": 0,
+					"collapsed": false,
+					"color": [
+						134,
+						30,
+						233,
+						1
+					]
+				},
+				"1865257222470036": {
+					"id": "1865257222470036",
+					"name": "Family",
+					"dms": [
+						"781593685615706133",
+						"694901780168966165",
+						"675845515468079108"
+					],
+					"pos": 1,
+					"collapsed": false,
+					"color": [
+						52,
+						84,
+						219,
+						1
+					]
+				}
+			}
+		}
+	},
+	"preCategories": {
+		"friends": {
+			"enabled": false,
+			"collapsed": false
+		},
+		"blocked": {
+			"enabled": false,
+			"collapsed": false
+		},
+		"groups": {
+			"enabled": false,
+			"collapsed": false
+		}
+	},
+	"recentOrder": {
+		"channelList": false,
+		"guildList": false
+	}
+}

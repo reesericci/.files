@@ -1,0 +1,23 @@
+{
+    "settings": {
+        "lastChangelogVersionSeen": "2.0.4",
+        "activeProfileID": 0,
+        "rpcEventInjection": true
+    },
+    "profiles": [
+        {
+            "name": "os",
+            "clientID": "811364721503895602",
+            "state": "Free as in freedom",
+            "details": "Linux > Windows/Mac",
+            "largeImageKey": "fedora-icon",
+            "largeImageText": "",
+            "smallImageKey": "tux",
+            "smallImageText": "Tux - The Linux mascot",
+            "button1Label": "Switch to linux!",
+            "button1URL": "https://getfedora.org",
+            "button2Label": "Learn about Free software",
+            "button2URL": "https://fsf.org"
+        }
+    ]
+}

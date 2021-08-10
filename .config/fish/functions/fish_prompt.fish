@@ -1,0 +1,1 @@
+/home/reesericci/.local/share/omf/themes/bobbythefish/fish_prompt.fish

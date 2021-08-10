@@ -1,0 +1,16 @@
+{
+    "didShowIssueHelperPopup": true,
+    "currentVersionInfo": {
+        "version": "2.4.1",
+        "hasShownChangelog": true
+    },
+    "settings": {
+        "tabs": [],
+        "favs": [],
+        "showTabBar": true,
+        "showFavBar": true,
+        "reopenLastChannel": false,
+        "showTabUnreadBadges": true,
+        "showFavUnreadBadges": true
+    }
+}

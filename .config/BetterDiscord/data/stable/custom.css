@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Neue Haas Grotesk Text Pro';
+    font-style: bold;
+    font-weight: 700;
+    src: local('NHaasGroteskTXW01-75Bd');
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Text Pro';
+    src: local('NHaasGroteskTXW01');
+}
+*{
+font-family: 'Neue Haas Grotesk Text Pro', sans-serif !important;
+}
+#pluginNotice {
+    display: none;
+}
