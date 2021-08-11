@@ -1,12 +1,14 @@
 function neofetch
   env SHELL=/bin/fish neofetch $argv
 end
-figlet -w 100 $USER@$HOSTNAME | lolcat
-echo 
+
+figlet -w 100 reesericci@poptop | lolcat
 neofetch | lolcat
+
 alias vim="nvim"
 alias ls="exa -lah"
 alias cat="bat"
+
 #  Functions needed for !! and !$
 function __history_previous_command
   switch (commandline -t)
@@ -34,12 +36,3 @@ else
   bind ! __history_previous_command
   bind '$' __history_previous_command_arguments
 end
-
-# Function for creating a backup file
-# ex: backup file.txt
-# result: copies file as file.txt.bak
-function backup --argument filename
-    cp $filename $filename.bak
-end
-
-
