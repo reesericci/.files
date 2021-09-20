@@ -4,7 +4,7 @@
     "CrashRecovery": true,
     "DoNotTrack": true,
     "ImageToClipboard": true,
-    "InAppNotifications": false,
+    "InAppNotifications": true,
     "NotificationSounds": true,
     "ServerSearch": false,
     "TypingIndicator": true,
@@ -35,9 +35,10 @@
     "BadgesEverywhere": false,
     "ClickToCopyUsername": true,
     "ThemeRepo": true,
-    "TimedLightDarkMode": true,
+    "TimedLightDarkMode": false,
     "HideIconBadge": true,
     "Translator": true,
     "ShowBadgesInChat": true,
-    "ReadAllNotificationsButton": false
+    "ReadAllNotificationsButton": false,
+    "BetterFriendList": true
 }

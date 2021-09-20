@@ -92,6 +92,7 @@
 		"listening": "$user started listening to '$song'",
 		"streaming": "$user started streaming '$game'",
 		"offline": "$user changed status to '$status'",
+		"login": "$user just logged in '$status'",
 		"custom": "$user changed status to '$custom'"
 	},
 	"observed": {
@@ -123,13 +124,17 @@
 				"702879881733603329": {},
 				"734557732647993479": {},
 				"736255180961480855": {},
-				"747827007890653226": {},
 				"755817569981825044": {},
 				"776972907791908864": {},
 				"781590628994908230": {},
-				"813528741066047488": {}
+				"813528741066047488": {},
+				"642572462881767435": {},
+				"844297268890566677": {}
 			},
-			"strangers": {}
+			"strangers": {
+				"747827007890653226": {},
+				"773931835117928488": {}
+			}
 		}
 	}
 }

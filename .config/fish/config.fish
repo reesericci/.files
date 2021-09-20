@@ -36,3 +36,8 @@ else
   bind ! __history_previous_command
   bind '$' __history_previous_command_arguments
 end
+
+set B2_ACCOUNT_ID 00220c852b77ed80000000001
+set B2_ACCOUNT_KEY K002o8Mltol0L1EeJQLMTZB74ds4JOg
+export B2_ACCOUNT_ID
+export B2_ACCOUNT_KEY
