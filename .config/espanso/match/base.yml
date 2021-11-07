@@ -1,0 +1,64 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+  - trigger: ":@"
+    replace: "me@reeseric.ci"
+  - trigger: ":web"
+    replace: "https://reeseric.ci"
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+  - trigger: ":now"  
+    replace: "{{mytime}}"  
+    vars:    
+      - name: mytime      
+        type: date      
+        params:        
+          format: "%I:%M %p"
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: dig @1.1.1.1 ch txt whoami.cloudflare +short | sed 's/^.\(.*\).$/\1/'
+  - trigger: ":ssh"
+    replace: "{{pub}}"
+    vars:
+      - name: pub
+        type: shell
+        params:
+          cmd: /bin/cat /home/reesericci/.ssh/id_rsa.pub
+      - name: priv
+        type: shell
+        params:
+          cmd: /bin/cat /home/reesericci/.ssh/id_rsa
+  - trigger: ":pssh"
+    replace: "{{priv}}"
+    vars:
+      - name: pub
+        type: shell
+        params:
+          cmd: /bin/cat /home/reesericci/.ssh/id_rsa.pub
+      - name: priv
+        type: shell
+        params:
+          cmd: /bin/cat /home/reesericci/.ssh/id_rsa
+
+
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/

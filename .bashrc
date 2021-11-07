@@ -492,3 +492,7 @@ alias vim="nvim"
 alias matrix="unimatrix -s 95 -b | lolcat"
 ### EOF ###
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
