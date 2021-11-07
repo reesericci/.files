@@ -1,0 +1,385 @@
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  /*! display: none; */
+}
+
+/*Collapse in default state and add transition*/
+#sidebar-box #sidebar:hover { 
+    /*! overflow: visible !important; */
+    min-width: 40px;
+    max-width: 40px;
+    border-right: 1px solid var(--panel-separator-color);
+    z-index: 2;
+    --sidebar-background-color: #f5f6f7 !important;
+}
+
+/*All other sidebar-boxes should be larger on hover*/
+#sidebar-box:hover { 
+  min-width: 350px !important;
+  max-width: 350px !important;
+  z-index: 1;
+  margin-right: -300px !important;
+}
+
+/*Tree Style Tab specific size*/
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+      min-width: 260px !important;
+      max-width: 260px !important;
+      z-index: 1;
+      margin-right: -210px !important;
+}
+
+
+#sidebar-header {
+  border: none !important;
+}
+
+#sidebar-close, #sidebar-title, #sidebar-switcher-arrow {
+    display: none;
+    border: none;
+  }
+
+#sidebar-switcher-target {
+    border: none !important;
+    margin-left: 4.5px !important;
+}
+
+#sidebar-switcher-target:focus-visible:not(:hover, [open]), #sidebar-close:focus-visible:not(:hover, [open]) {
+  outline: none !important;
+}
+
+
+:root {
+  --sidebar-width: 50px;
+  --toolbar-height: -50px;
+  --menubar-height: -65px;
+  --toolmenubar-height: -80px;
+  --sidebar-padding: calc(var(--sidebar-width) + 5px);
+  --toolbar-start-end-padding: 5px !important;
+  --toolbar-start-end-padding: 5px !important;
+}
+
+
+#main-window #PersonalToolbar {
+  margin-left: var(--sidebar-width);
+  padding: 2px 5px !important;
+  padding-top: 0px !important;
+  margin-top: -3px !important;
+}
+
+
+/* lock sidebar to height by doing the inverse margin of the toolbar element */
+#sidebar-box {
+  z-index: 1000 !important;
+  position: relative!important;
+  margin-top: var(--menubar-height) !important;
+  border-right: 1px solid #ccc;
+  background: #f6f7f8 !important;
+  transition: none !important;
+}
+
+#main-window[title^="Firefox Developer Edition"] #sidebar-box {
+  margin-top: var(--toolmenubar-height) !important;
+}
+
+/* lock sidebar to specified width */
+#sidebar-box {
+    min-width: var(--sidebar-width) !important;
+    max-width: var(--sidebar-width) !important;
+    overflow: hidden !important;
+     transition-property: width;
+    transition-duration: .25s;
+    transition-delay: .25s;
+    transition-timing-function: ease-in;
+}
+
+.browser-toolbar {
+  margin-left: var(--sidebar-width);
+}
+
+.sidebar-splitter {
+  opacity: 0 !important;
+  width: 0px !important;
+  border: none !Important;
+  --avatar-image-url: none !important;
+}
+
+/* hide sidebar header for tree style tabs sidebar */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  /*! display: none; */
+}
+
+#sidebarMenu-popup .subviewbutton {
+    min-width: 0px;
+    padding: 0;
+    margin: 0 !Important;
+}
+
+toolbarseparator {
+    display: none;
+}
+
+#sidebar { border-right: 0px solid #ccc; overflow: hidden;width: 50px !important;min-width: 50px !important;width: 100% !important;/*! padding-top: 10px; */}
+
+/* Hide the title bar */
+#titlebar{ visibility: collapse !important; }
+
+/* hide normal horizontal tab bar */
+#TabsToolbar { visibility: collapse !important; }
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+  border: none !important;
+  background: none !important;
+}
+#urlbar[breakout-extend] {
+    top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+    left: 0 !important;
+    width: 100% !important;
+}
+#urlbar[breakout-extend] #urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    /*padding: 0px !important;*/
+    padding-block: 0px !important;
+    padding-inline: 0px !important;
+}
+.urlbarView-row {
+    padding: 0px 2px 0px 2px;
+}
+/* --- More compact "Search with Google" rows */
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner {
+    min-height: auto !important;
+    width: auto !important;
+}
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
+    margin-bottom: -1px;
+}
+/* END More compact "Search with Google" rows --- */
+#pocket-button {
+  display: none !important;
+}
+#sidebar-switcher-target {
+  display: none;
+}
+#sidebar {
+	padding-top: 10px;
+  border-right: none !important;
+}
+#sidebar-box {
+  border-right: none !important;
+}
+/* Linux & macOS specific styles */
+@media (-moz-gtk-csd-available), (-moz-mac-big-sur-theme: 0), (-moz-mac-big-sur-theme: 1) {
+    #TabsToolbar:not([customizing="true"]) {
+          visibility: collapse !important;
+      }
+
+    #toolbar-menubar {
+          padding-top: 0px !important;
+      }
+
+    #TabsToolbar:not([customizing="true"]) {
+          visibility: collapse !important;
+      }
+
+    #toolbar-menubar {
+          padding-top: 0px !important;
+      }
+
+    #nav-bar {
+          padding-left: 80px;
+      }
+
+    #TabsToolbar .titlebar-buttonbox-container {
+          visibility: visible !important;
+          position: absolute;
+          top: 12px;
+          left: 0px;
+      }
+
+    .titlebar-buttonbox-container {
+          display: block;
+      }
+
+    .titlebar-button > .toolbarbutton-icon {
+          height: 13x !important;
+          min-height: 13px !important;
+          width: 13px !important;
+          min-width: 13px !important;
+      }
+
+    .titlebar-button {
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+          padding-top: 6px !important;
+      }
+
+    .titlebar-placeholder[type="pre-tabs"] {
+          width: 120px !important;
+      }
+
+    .titlebar-buttonbox-container {
+          -moz-box-ordinal-group: 0;
+      }
+}
+
+/* Windows specific styles */
+@media (-moz-os-version: windows-win10) { 
+    /* Hide main tabs toolbar */
+    :root[tabsintitlebar]{
+          --uc-window-control-width: 138px; /* Space at the right of nav-bar for window controls */
+          /* --uc-window-drag-space-width: 24px; */  /* To add extra window drag space in nav-bar */
+      }
+
+    #nav-bar{
+          border-inline: var(--uc-window-drag-space-width,0px) solid var(--toolbar-bgcolor) ;
+          border-inline-style: solid !important;
+          border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px));
+
+          padding-top: 0px !important;
+      }
+
+    :root {
+          --uc-toolbar-height: 32px;
+          --chrome-content-separator-color: none !important;
+      }
+
+    :root:not([uidensity="compact"]) {
+          --uc-toolbar-height: 38px;
+      }
+
+    #TabsToolbar {
+          visibility: collapse !important;
+      }
+
+    :root:not([inFullscreen]) #nav-bar {
+          margin-top: calc(0px - var(--uc-toolbar-height));
+      }
+
+    #toolbar-menubar {
+          min-height: unset !important;
+          height: var(--uc-toolbar-height) !important;
+          position: relative;
+      }
+
+    #main-menubar {
+          -moz-box-flex: 1;
+          background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+          background-clip: padding-box;
+          border-right: 30px solid transparent;
+          border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
+      }
+
+    #toolbar-menubar:not([inactive]) {
+          z-index: 2;
+      }
+
+    #toolbar-menubar[inactive] > #menubar-items {
+          opacity: 0;
+          pointer-events: none;
+          margin-left: var(--uc-window-drag-space-width,0px);
+      }
+
+
+    :root[inFullscreen] #nav-bar {
+          border-inline: none !important;
+      }
+}
+#urlbar {
+  position: relative;
+  z-index: 1;
+}
+
+#identity-box:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: white;
+  opacity: 0.2;
+}
+
+
+/* There is also grantedPermissions, but irrelevant. */
+
+/* about:about */
+#urlbar[pageproxystate='valid'] #identity-box.localResource:after {
+    background-color: #0a84ff; /* Firefox Red 50 */
+    z-index: 10;
+}
+
+/* about:config */
+#urlbar[pageproxystate='valid'] #identity-box.chromeUI:after {
+  background: #0a84ff; /* Firefox Blue 50 */
+  z-index: 10;
+}
+
+/* uBlock Origin Dashboard */
+#urlbar[pageproxystate='valid'] #identity-box.extensionPage:after {
+  background: #45a1ff; /* Firefox Blue 40 */
+  z-index: 10;
+}
+
+/* https://www.github.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{
+  background: #058b00; /* Firefox Green 70 */
+  z-index: 10;
+}
+
+/* https://www.google.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain:after{
+  background: #12bc00; /* Firefox Green 60 */
+  z-index: 10;
+}
+
+/* https://mixed-script.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveBlocked:after {
+  background: #30e60b !important; /* Firefox Green 50 */
+  z-index: 10;
+}
+
+/* https://mixed.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
+  background: #d7b600 !important; /* Firefox Yellow 60 */
+  z-index: 10;
+}
+
+/* https://very.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
+  background: #d7b600 !important; /* Firefox Yellow 60 */
+  z-index: 10;
+}
+
+/* https://self-signed.badssl.com/ but add certificate exception */
+#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
+  background: #ffe900 !important; /* Firefox Yellow 50 */
+  z-index: 10;
+}
+
+#urlbar[pageproxystate='valid'] #identity-box.certErrorPage:after {
+  background: #ffe900 !important; /* Firefox Yellow 50 */
+  z-index: 10;
+}
+
+/* https://mixed-script.badssl.com/ but disable protection */
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
+  background: #d70022 !important;  /* Firefox Red 60 */
+  z-index: 10;
+}
+
+/* http://http-login.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
+  background: #a4000f !important;  /* Firefox Red 70 */
+  z-index: 10;
+}
